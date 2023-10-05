@@ -4,8 +4,12 @@
   "description": "Desktop application that turns on 'do not disturb' mode for specific calendar events",
   "main": "main.js",
   "scripts": {
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Anna Truong",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^26.3.0"
+  }
 }
