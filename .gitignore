@@ -15,3 +15,5 @@ yarn-error.log
 
 # Ignore application configuration files (if any)
 config.json
+
+.env
