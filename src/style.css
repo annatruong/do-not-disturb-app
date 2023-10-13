@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, h1, form, input, label, .login-button {
+    display: block;
+}
+
+form {
+    border: 3px solid #f1f1f1;
+    border-radius: 10px;
+    width: 60%;
+    height: 45%;
+    margin: auto;
+    padding: 20px 5px 5px;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+  }
+  
+  label {
+    margin: 5px auto;
+    width: 80%;
+    font-size: 14px;
+    color: #454545;
+  }
+
+  input[type=text], input[type=password] {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 4px auto 15px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 12px;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #151B54;
+    color: white;
+    padding: 12px;
+    margin: 2px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 48%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+
+ #login-button {
+    width: 80%;
+    padding: 0;
+    margin: 5px auto;
+    text-align: center;
+
+  }

@@ -12,43 +12,43 @@ const createMainWindow = () => {
 }
 
 
-const createAuthWindow = () => {
-  authWindow = new BrowserWindow({
-    width: 500,
-    height: 700,
-    show: false,
-    webPreferences: {
-      nodeIntegration: false,
-      contextIsolation: true,
-    },
-  });
+// const createAuthWindow = () => {
+//   authWindow = new BrowserWindow({
+//     width: 500,
+//     height: 700,
+//     show: false,
+//     webPreferences: {
+//       nodeIntegration: false,
+//       contextIsolation: true,
+//     },
+//   });
   
-  const authUrl = `https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=${process.env.CLIENT_ID}&redirect_uri=${process.env.REDIRECT_URI}&scope=${process.env.SCOPE}`;
-  authWindow.loadURL(authUrl);
+//   const authUrl = `https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=${process.env.CLIENT_ID}&redirect_uri=${process.env.REDIRECT_URI}&scope=${process.env.SCOPE}`;
+//   authWindow.loadURL(authUrl);
 
-  authWindow.once('ready-to-show', () => {
-    authWindow.show();
-  });
+//   authWindow.once('ready-to-show', () => {
+//     authWindow.show();
+//   });
 
-  authWindow.on('closed', () => {
-    authWindow = null;
-  });
+//   authWindow.on('closed', () => {
+//     authWindow = null;
+//   });
 
-  // ... Handle OAuth flow and redirection
+//   // ... Handle OAuth flow and redirection
 
-  // Other setup and event handling
-}
+//   // Other setup and event handling
+// }
 
 app.whenReady().then(() => {
     createMainWindow()
     // Create authentication window
-    createAuthWindow();
+    // createAuthWindow();
     app.on('activate', () => {
       if (BrowserWindow.getAllWindows().length === 0) {
         createMainWindow()
-        if (authWindow === null) {
-          createAuthWindow();
-        }
+        // if (authWindow === null) {
+        //   createAuthWindow();
+        // }
       }
     })
   })
