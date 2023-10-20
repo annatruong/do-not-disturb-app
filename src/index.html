@@ -2,21 +2,23 @@
 <html id="top">
     <head>
         <link href="./style.css" rel="stylesheet">
+        <script src="./renderer.js"></script>
     </head>
     <body>
         <main>
-          <form>          
+          <form id="login-form">         
               <label for="uname"><b>Username</b></label>
-              <input type="text" placeholder="Enter Username" name="uname" required>
+              <input type="text" placeholder="Enter Username" name="uname" id="username" required>
           
               <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
+              <input type="password" placeholder="Enter Password" name="psw" id="password" required>
           
-              <div id="login-button">
-                <button type="submit">Login</button>
-                <button type="button">Create Account</button>
+              <div id="login-modal-button">
+                <button type="submit" id="login">Login</button>
+                <button type="button" id="create-account">Create Account</button>
               </div>
           </form>
         </main>
+
     </body>
 </html>
